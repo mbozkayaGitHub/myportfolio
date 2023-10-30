@@ -1,0 +1,50 @@
+@import "../../sass/variables.scss";
+
+.home-container{
+    background: linear-gradient(to right, rgba(gray, 0.1), rgba(gray, 0.1)),
+    url("../../assets/img/profile.avif");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    .object_developer{
+        animation: rotate 15s infinite linear both alternate;
+        z-index: 1;
+        margin-bottom: 1rem;
+        width: 12rem;
+        box-shadow: 0 0 70px 20px rgba(124, 200, 237, 0.668);
+        background: transparent;
+        border-radius: 100%;
+    }
+    .greet{
+        color: $text-color;
+    }
+    .name{
+        color:$tertiary-color;
+        border-bottom: 1px solid $secondary-color;
+        font-family:$tertiary-font;
+        letter-spacing:0.3rem;
+    }
+    .title{
+        color: $text-color;
+        font-family: $primary-font;
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes rotate {
+    0%   {}
+    17%  {transform: translate(-3vw,-3vh)}
+    34%  {transform: translate(-3vw, 3vh) }
+    51%  {}
+    68%  {transform: translate(3vw, -3vh) }
+    85%  {transform: translate(3vw, 3vh);
+    }
+    100% {}
+  }
